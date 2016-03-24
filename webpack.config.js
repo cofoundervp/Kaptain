@@ -2,6 +2,11 @@ var path = require('path');
 var webpack = require('webpack');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 
+var bourbonPath = require('node-bourbon').includePaths;
+var neatPaths = require("node-neat").includePaths.map(function(sassPath) {
+  return "includePaths[]=" + sassPath;
+}).join("&");
+
 var devFlagPlugin = new webpack.DefinePlugin({
   __DEV__: JSON.stringify(JSON.parse(process.env.DEBUG || 'false'))
 });
@@ -38,7 +43,10 @@ module.exports = {
       },
       {
         test: /\.scss$/,
-        loader: ExtractTextPlugin.extract("style-loader", "css-loader")
+        loader: ExtractTextPlugin.extract(
+          'style-loader',
+          'css-loader!sass-loader?includePaths[]=' + bourbonPath + '&' + neatPaths
+          )
       },
       {
         test: /\.(png|jpg|gif|woff|woff2)$/,
@@ -47,6 +55,7 @@ module.exports = {
     ]
   },
   resolve: {
-    extensions: ['', '.js', '.jsx','.json']
+    extensions: ['', '.js', '.jsx','.json'],
+    modulesDirectories: ['node_modules']
   }
 };

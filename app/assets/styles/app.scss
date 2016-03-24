@@ -1,5 +1,12 @@
+@import '~normalize.css/normalize.css';
+@import 'bourbon';
+@import 'neat';
+
+body {
+  @include linear-gradient(to top, #ccc, #000);
+}
+
 .text {
   font-size: 2rem;
   line-height: 1.5;
-  color: #FF0000;
 }

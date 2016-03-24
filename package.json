@@ -9,14 +9,15 @@
   "dependencies": {
     "babel-core": "^6.3.15",
     "es6-promise": "^3.1.2",
-    "whatwg-fetch": "^0.11.0",
     "lodash": "^4.6.1",
+    "normalize-scss": "^4.0.3",
     "react": "^0.14.0",
     "react-dom": "^0.14.0",
-    "redux": "^3.0.4",
     "react-redux": "^4.0.0",
+    "redux": "^3.0.4",
     "redux-devtools": "^2.1.5",
-    "redux-thunk": "^1.0.0"
+    "redux-thunk": "^1.0.0",
+    "whatwg-fetch": "^0.11.0"
   },
   "devDependencies": {
     "babel-core": "^6.3.15",
@@ -26,6 +27,8 @@
     "babel-preset-react": "^6.3.13",
     "babel-preset-react-hmre": "^1.0.0",
     "babel-preset-stage-0": "^6.3.13",
+    "bourbon": "^4.2.6",
+    "bourbon-neat": "^1.7.4",
     "cross-env": "^1.0.6",
     "css-loader": "^0.23.1",
     "cssnext-loader": "^1.0.1",
@@ -36,7 +39,10 @@
     "express": "^4.13.4",
     "extract-text-webpack-plugin": "^1.0.1",
     "file-loader": "^0.8.5",
+    "node-bourbon": "^4.2.8",
+    "node-neat": "^1.7.2",
     "node-sass": "^3.4.2",
+    "normalize.css": "^4.0.0",
     "open": "0.0.5",
     "path": "^0.12.7",
     "sass-loader": "^3.2.0",
