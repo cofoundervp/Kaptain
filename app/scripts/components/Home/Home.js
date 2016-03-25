@@ -13,7 +13,7 @@ export default class Home extends Component {
     const actions = bindActionCreators(HomeActions, dispatch);
     return (
       <div>
-        <h1 className="text home">Hello {title}!</h1>
+        <h1 className="">Hello hello {title}!</h1>
         <img src={kaptainImg} alt="Kaptain" />
         <button onClick={(e) => actions.changeTitle(prompt())}>
           Update Title

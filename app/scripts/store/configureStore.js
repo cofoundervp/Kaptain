@@ -19,5 +19,15 @@ if (__DEV__) {
 const rootReducer = combineReducers(reducers);
 
 export default function configureStore(initialState) {
-  return createStoreWithMiddleware(rootReducer, initialState);
+  const store = createStoreWithMiddleware(rootReducer, initialState);
+
+  // TODO: fix this https://github.com/reactjs/react-redux/releases/tag/v2.0.0
+  if (module.hot) {
+    module.hot.accept('../reducers/index', () => {
+      const nextReducer = combineReducers(require('../reducers/index'));
+      store.replaceReducer(nextReducer);
+    });
+  }
+
+  return store;
 }
