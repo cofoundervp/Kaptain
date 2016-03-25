@@ -4,7 +4,7 @@ let defaultState = {
   title: 'Home'
 };
 
-export default function(state = defaultState, action) {
+export default (state = defaultState, action) => {
   switch (action.type) {
     case ActionTypes.TITLE_CHANGED:
       return {...state, title: action.text};

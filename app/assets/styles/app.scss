@@ -2,11 +2,9 @@
 @import 'bourbon';
 @import 'neat';
 
-body {
-  @include linear-gradient(to top, #ccc, #000);
-}
+@import './grids';
+@import './variables';
 
-.text {
-  font-size: 2rem;
-  line-height: 1.5;
+body {
+  color: $main-color;
 }

@@ -12,12 +12,12 @@ var devFlagPlugin = new webpack.DefinePlugin({
 });
 
 module.exports = {
-  devtool: 'cheap-module-eval-source-map',
+  debug: true,
+  devtool: 'eval-source-map',
   cache: true,
   entry: [
     'eventsource-polyfill',
-    // 'webpack-dev-server/client?http://127.0.0.1:8080',
-    // 'webpack/hot/only-dev-server',
+    'webpack/hot/dev-server',
     'webpack-hot-middleware/client?path=/__webpack_hmr&timeout=20000',
     './app/scripts/index.js'
   ],
@@ -35,6 +35,13 @@ module.exports = {
     new ExtractTextPlugin('app.css')
   ],
   module: {
+    preLoaders: [
+      {
+        test: /\.(js|jsx)$/,
+        include: path.join(__dirname, '/app'),
+        loader: 'eslint-loader'
+      }
+    ],
     loaders: [
       {
         test: /\.js$/,
@@ -56,6 +63,6 @@ module.exports = {
   },
   resolve: {
     extensions: ['', '.js', '.jsx','.json'],
-    modulesDirectories: ['node_modules']
+    modulesDirectories: ['app','node_modules']
   }
 };
