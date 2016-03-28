@@ -1,6 +1,7 @@
 {
   "name": "kaptain",
   "version": "0.1.0",
+  "repository": "https://github.com/cofoundervp/Kaptain",
   "scripts": {
     "postinstall": "cd lib/client && npm install && npm build",
     "postinstall-dev": "cd lib/client && npm install && npm build-dev",
@@ -8,7 +9,12 @@
     "start-debug": "DEBUG=true node index.js"
   },
   "dependencies": {
-    "koa": "^1.2.0"
+    "dotenv": "^2.0.0",
+    "koa": "^2.0.0",
+    "koa-mount": "^2.0.0",
+    "koa-router": "^7.0.1",
+    "mongodb": "^2.1.11"
   },
-  "devDependencies": {}
+  "devDependencies": {},
+  "license": "GPL-3.0"
 }
