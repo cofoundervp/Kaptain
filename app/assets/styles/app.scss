@@ -1,0 +1,10 @@
+@import '~normalize.css/normalize.css';
+@import 'bourbon';
+@import 'neat';
+
+@import './grids';
+@import './variables';
+
+body {
+  color: $main-color;
+}
