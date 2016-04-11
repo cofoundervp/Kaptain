@@ -15,5 +15,5 @@ if (!module.parent) {
     const kaptain = new Kaptain(process.env.DB_DRIVER, process.env.DB_HOST,
         process.env.DB_DATABASE, process.env.DB_PORT, db_config);
 
-    kaptain.listen(process.env.SERVER_PORT || 443);
+    kaptain.listen(process.env.SERVER_PORT || 8080);
 }
