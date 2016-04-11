@@ -1,5 +1,7 @@
 # Kaptain
 
+[![Build Status](https://travis-ci.org/cofoundervp/Kaptain.svg?branch=master)](https://travis-ci.org/cofoundervp/Kaptain)
+[![Stories in Ready](https://badge.waffle.io/cofoundervp/Kaptain.png?label=ready&title=Ready)](http://waffle.io/cofoundervp/Kaptain)
 [![Gitter](https://badges.gitter.im/cofoundervp/Kaptain.svg)](https://gitter.im/cofoundervp/Kaptain?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
 
