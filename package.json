@@ -1,7 +1,10 @@
 {
   "name": "kaptain",
   "version": "0.1.0",
-  "repository": "https://github.com/cofoundervp/Kaptain",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cofoundervp/Kaptain.git"
+  },
   "scripts": {
     "postinstall": "cd lib/client && npm install && npm build",
     "postinstall-dev": "cd lib/client && npm install && npm build-dev",
