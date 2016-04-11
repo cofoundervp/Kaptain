@@ -1,6 +1,7 @@
 # Kaptain
 
 [![Gitter](https://badges.gitter.im/cofoundervp/Kaptain.svg)](https://gitter.im/cofoundervp/Kaptain?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+[![Stories in Ready](https://badge.waffle.io/cofoundervp/Kaptain.png?label=ready&title=Ready)](http://waffle.io/cofoundervp/Kaptain)
 
 
 ## Running your project
