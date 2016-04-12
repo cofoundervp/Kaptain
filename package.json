@@ -9,7 +9,8 @@
     "postinstall": "cd lib/client && npm install && npm build",
     "postinstall-dev": "cd lib/client && npm install && npm build-dev",
     "start": "node index.js",
-    "start-debug": "DEBUG=true node index.js"
+    "start-debug": "DEBUG=true node index.js",
+    "test": "node test/index.js | faucet"
   },
   "dependencies": {
     "dotenv": "^2.0.0",
@@ -18,6 +19,11 @@
     "koa-router": "^7.0.1",
     "mongodb": "^2.1.11"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "faucet": "0.0.1",
+    "supertest": "^1.2.0",
+    "tap-spec": "^4.1.1",
+    "tape": "^4.5.1"
+  },
   "license": "GPL-3.0"
 }

@@ -1,31 +1,8 @@
 'use strict';
 
-var datastore1 = {
-    table1: [
-        {id: 1, name: 'Vinh Dang', gender: 'male'},
-        {id: 2, name: 'James Kenaley', gender: 'male'},
-        {id: 3, name: 'Tu Duong', gender: 'female'}
-    ]
-};
-
-var datastores = {
-    db1: datastore1
-};
-
 module.exports = class Testing {
-    constructor(uri) {
-        let components = uri.split('://');
-        if (components.length != 2 || components[0] != 'testing') {
-            console.error('Db connection error');
-            process.exit(1);
-        }
-        let db = datastores[components[1]];
-        if (!db) {
-            console.error('Db connection error');
-            process.exit(1);
-        }
-
-        this.db = db;
+    constructor(data) {
+        this.db = data;
     }
 
     get tables() {
