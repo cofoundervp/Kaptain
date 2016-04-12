@@ -1,3 +1,4 @@
+sudo: false
 language: node_js
 node_js:
   - "5"
@@ -7,3 +8,7 @@ node_js:
   - "5.4"
   - "5.5"
 script: npm test
+cache:
+  directories:
+    - node_modules
+    - lib/client/node_modules
