@@ -10,7 +10,7 @@
     "postinstall-dev": "cd lib/client && npm install && npm build-dev",
     "start": "node index.js",
     "start-debug": "DEBUG=true node index.js",
-    "test": "node test/index.js | faucet"
+    "test": "node test/index.js"
   },
   "dependencies": {
     "dotenv": "^2.0.0",
